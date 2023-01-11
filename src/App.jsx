@@ -4,7 +4,8 @@ import './App.css';
 // import Main from './pages/main'
 // import Footer from './pages/footer'
 
-import Hook from './pages/hook'
+// import Hook from './pages/hook'
+import UseStore from './pages/use-store';
 
 // 类组件
 // import ClassComponent from './components/class-component';
@@ -12,7 +13,9 @@ import Hook from './pages/hook'
 const App = () => {
   return(
     <div className='App'>
-      <Hook></Hook>
+      <UseStore></UseStore>
+
+      {/* <Hook></Hook> */}
       
       {/* <Header  root ='root'></Header>
       <Main></Main>
