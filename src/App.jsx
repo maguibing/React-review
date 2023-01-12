@@ -5,7 +5,8 @@ import './App.css';
 // import Footer from './pages/footer'
 
 // import Hook from './pages/hook'
-import UseStore from './pages/use-store';
+// import UseStore from './pages/use-store';
+import ReduxThunk from './pages/redux-thunk';
 
 // 类组件
 // import ClassComponent from './components/class-component';
@@ -13,8 +14,9 @@ import UseStore from './pages/use-store';
 const App = () => {
   return(
     <div className='App'>
-      <UseStore></UseStore>
+      <ReduxThunk></ReduxThunk>
 
+      {/* <UseStore></UseStore> */}
       {/* <Hook></Hook> */}
       
       {/* <Header  root ='root'></Header>
