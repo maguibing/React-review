@@ -7,12 +7,8 @@ import { delTodo as delTodoFunc, toggleTodo } from "../../../store/action/todo"
 const Main = () => {
   const store = useSelector(state => state.todos)
   const dispatch = useDispatch()
-  const changeDone = (id) => {
-    dispatch(toggleTodo(id))
-  }
-  const delTodo = (id) => {
-    dispatch(delTodoFunc(id))
-  }
+  const changeDone = (id) => dispatch(toggleTodo(id))
+  const delTodo = (id) => dispatch(delTodoFunc(id))
 
   return(
     <section className="main">
