@@ -1,4 +1,4 @@
-import { ADD_TODO, TOGGLE_TODO, DEL_TODO } from '../constant'
+import { ADD_TODO, TOGGLE_TODO, DEL_TODO, CHECK_ALL, CLEAR_TODO } from '../constant'
 
 const initial = [
   { id: 1, text: '吃饭', done: true },
@@ -17,6 +17,13 @@ export const todos = (state = initial, action) => {
       })
     case DEL_TODO:
       return state.filter(v=> v.id !== action.payload.id)
+    case CHECK_ALL:
+      return state.map(v => ({
+        ...v,
+        done: action.payload.done
+      }))
+    case CLEAR_TODO:
+      return state.filter(v=>!v.done)
     default: 
       return state
   }
