@@ -14,6 +14,7 @@ import { BrowserRouter as Router, Route, Switch, Redirect} from 'react-router-do
 import Login from './pages/router/login'
 import Home from './pages/router/home'
 import NotFound from './pages/router/404'
+import AntDesign from './pages/antd';
 
 // 类组件
 // import ClassComponent from './components/class-component';
@@ -31,12 +32,12 @@ const App = () => {
         </ul>
         <hr /> */}
       <div className='App'>
-
         <Switch>
           <Route exact path='/'>
-            <Redirect to='/home'></Redirect>
+            <Redirect to='/antd'></Redirect>
           </Route>
           <Route path='/home' component={Home} />
+          <Route path='/antd' component={AntDesign} />
           {/* <Route path='/login/:id' component={Login} /> */}
           <Route path='/login' component={Login} />
           <Route component={NotFound} />
