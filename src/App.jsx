@@ -34,10 +34,11 @@ const App = () => {
 
         <Switch>
           <Route exact path='/'>
-            <Redirect to='/login'></Redirect>
+            <Redirect to='/home'></Redirect>
           </Route>
-          <Route path='/login' exact component={Login} />
-          <Route path='/home' exact component={Home} />
+          <Route path='/home' component={Home} />
+          {/* <Route path='/login/:id' component={Login} /> */}
+          <Route path='/login' component={Login} />
           <Route component={NotFound} />
         </Switch>
 

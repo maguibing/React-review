@@ -1,9 +1,14 @@
-import { useHistory } from "react-router-dom"
+import { useHistory, useLocation, useRouteMatch } from "react-router-dom"
+import qs from 'query-string'
 
 const LoginRouter = (props) => {
 
-  // console.log(props);
+  // console.log(props); 也可以获取路由对象
   const history = useHistory()
+  const location = useLocation()
+  const match = useRouteMatch()
+  console.log(history, location, match);
+  console.log(qs.parse(location.search));
 
   return(
     <div className="login-router">
